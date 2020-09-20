@@ -19,3 +19,6 @@ jobs:
 
     - name: Build
       run: hugo --minify
+
+    - name: Deploy
+      run: cp -rf ./ ~/mastodon-docs
