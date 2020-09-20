@@ -21,4 +21,4 @@ jobs:
       run: hugo --minify
 
     - name: Deploy
-      run: cp -rf ~/actions-runner/_work/mastodon-docs/mastodon-docs/ ~/mastodon-docs/
+      run: cp -rf ./  /home/mastodon/mastodon-docs/
