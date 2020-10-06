@@ -158,4 +158,4 @@ diff --git a/app/chewy/tags_index.rb b/app/chewy/tags_index.rb
        edge_ngram: {
 ```
 
-{{< translation-status-zh-cn raw_title="Full-text search" raw_link="/admin/optional/elasticsearch/" last_tranlation_time="2020-05-05" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Full-text search" raw_link="/en/admin/optional/elasticsearch/" last_tranlation_time="2020-05-05" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

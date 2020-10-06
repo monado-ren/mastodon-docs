@@ -75,4 +75,4 @@ menu:
 由于Mastodon可以自托管，因此没有比在已经被人们信任的域名之上托管一个Mastodon站点更好的方法来验证你的身份。
 {{< /hint >}}
 
-{{< translation-status-zh-cn raw_title="Setting up your profile" raw_link="/user/profile/" last_tranlation_time="2020-05-02" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Setting up your profile" raw_link="/en/user/profile/" last_tranlation_time="2020-05-02" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

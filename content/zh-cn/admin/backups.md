@@ -52,4 +52,4 @@ menu:
 
 备份Redis是很容易的。Redis会定期将数据写入`/var/lib/redis/dump.rdb`文件，你只需要复制这个文件就可以了。
 
-{{< translation-status-zh-cn raw_title="Backing up your server" raw_link="/admin/backups/" last_tranlation_time="2020-05-06" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Backing up your server" raw_link="/en/admin/backups/" last_tranlation_time="2020-05-06" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

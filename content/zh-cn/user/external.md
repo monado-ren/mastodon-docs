@@ -19,4 +19,4 @@ menu:
 
 你可以使用你的Mastodon帐户登录到任何可以实现Mastodon API的应用程序。这些应用程序的列表可以在 [https://joinmastodon.org/apps](https://joinmastodon.org/apps) 中找到。
 
-{{< translation-status-zh-cn raw_title="Using Mastodon externally" raw_link="/user/external/" last_tranlation_time="2020-05-03" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Using Mastodon externally" raw_link="/en/user/external/" last_tranlation_time="2020-05-03" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

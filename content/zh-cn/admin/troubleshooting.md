@@ -26,4 +26,4 @@ menu:
 
 检查你是否在命令前使用 `RAILS_ENV=production` 指定正确的环境。默认情况下，假定使用开发环境，因此代码尝试加载开发相关gem。然而，在生产环境中，我们避免安装这些gem。这就是错误的来源。
 
-{{< translation-status-zh-cn raw_title="Troubleshooting errors" raw_link="/admin/troubleshooting/" last_tranlation_time="2020-05-08" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Troubleshooting errors" raw_link="/en/admin/troubleshooting/" last_tranlation_time="2020-05-08" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

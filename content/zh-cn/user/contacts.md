@@ -43,4 +43,4 @@ menu:
 **Keybase的身份验证是不可逆的。** Keybase使用不可变的签名链进行身份验证，所以一旦你在Keybase上验证了你的身份，你就不能删除它。你只能用你的相关私钥签署一个吊销信息来吊销你的验证。
 {{< /hint >}}
 
-{{< translation-status-zh-cn raw_title="More settings" raw_link="/user/contacts/" last_tranlation_time="2020-05-03" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="More settings" raw_link="/en/user/contacts/" last_tranlation_time="2020-05-03" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

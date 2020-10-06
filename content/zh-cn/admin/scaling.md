@@ -281,4 +281,4 @@ production:
 Sidekiq无法可靠的使用只读副本（read-replicas），因为即使是最微小的复制延迟也会导致查询不到相关纪录所致的任务失败。
 {{< /hint >}}
 
-{{< translation-status-zh-cn raw_title="Scaling up your server" raw_link="/admin/scaling/" last_tranlation_time="2020-05-06" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Scaling up your server" raw_link="/en/admin/scaling/" last_tranlation_time="2020-05-06" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

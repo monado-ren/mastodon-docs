@@ -242,4 +242,4 @@ Mastodon使用环境变量作为其的配置。
 
 * `SKIP_POST_DEPLOYMENT_MIGRATIONS`
 
-{{< translation-status-zh-cn raw_title="Configuring your environment" raw_link="/admin/config/" last_tranlation_time="2020-05-04" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Configuring your environment" raw_link="/en/admin/config/" last_tranlation_time="2020-05-04" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

@@ -54,4 +54,4 @@ Mastodon的用户名由两部分组成：
 
 相同的用户名*可以*在不同的服务器上注册——无法提前声明所有的域名后缀。就像电子邮件一样，你不应期待 `alice@outlook.com` 与 `alice@gmail.com` 或 `alice@yahoo.com` 是同一个人。
 
-{{< translation-status-zh-cn raw_title="Signing up for an account" raw_link="/user/signup/" last_tranlation_time="2020-05-02" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Signing up for an account" raw_link="/en/user/signup/" last_tranlation_time="2020-05-02" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

@@ -43,4 +43,4 @@ menu:
 
 在 设置 &gt; 帐户 底部，你可以找到删除帐户的选项。删除你的帐户是不可逆的，并且会导致你的个人资料和用户名永远无法使用。
 
-{{< translation-status-zh-cn raw_title="Moving or leaving accounts" raw_link="/user/moving/" last_tranlation_time="2020-05-03" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Moving or leaving accounts" raw_link="/en/user/moving/" last_tranlation_time="2020-05-03" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

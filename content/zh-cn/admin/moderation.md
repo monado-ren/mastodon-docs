@@ -73,4 +73,4 @@ sudo iptables -I INPUT 1 -m set --match-set spambots src -j DROP
 
 但是注意，不要把你自己封禁了。
 
-{{< translation-status-zh-cn raw_title="Moderation actions" raw_link="/admin/moderation/" last_tranlation_time="2020-05-08" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Moderation actions" raw_link="/en/admin/moderation/" last_tranlation_time="2020-05-08" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

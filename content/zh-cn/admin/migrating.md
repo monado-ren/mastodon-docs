@@ -92,4 +92,4 @@ rsync -avz ~/live/public/system/ mastodon@example.com:~/live/public/system/
 
 你可以使用[whatsmydns.net](https://whatsmydns.net/)来查看DNS扩散的过程。为了跳过这个过程，你可以修改你自己的`/etc/hosts`文件，将其指向你的新服务器，这样你可以尽早开始使用新服务器。
 
-{{< translation-status-zh-cn raw_title="Migrating to a new machine" raw_link="/admin/migrating/" last_tranlation_time="2020-05-06" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Migrating to a new machine" raw_link="/en/admin/migrating/" last_tranlation_time="2020-05-06" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

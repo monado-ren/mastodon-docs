@@ -44,4 +44,4 @@ RAILS_ENV=production bin/tootctl accounts create \
 
 填写完这些后，请点击“保存更改”。
 
-{{< translation-status-zh-cn raw_title="Setting up your new instance" raw_link="/admin/setup/" last_tranlation_time="2020-05-04" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Setting up your new instance" raw_link="/en/admin/setup/" last_tranlation_time="2020-05-04" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

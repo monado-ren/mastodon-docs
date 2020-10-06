@@ -89,4 +89,4 @@ Mastodon的基本搜索允许登录用户查找包含特定话题标签的嘟文
 
 {{< figure src="/assets/image%20%285%29.png" caption="一个列表时间轴" >}}
 
-{{< translation-status-zh-cn raw_title="Using the network features" raw_link="/user/network/" last_tranlation_time="2020-05-03" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Using the network features" raw_link="/en/user/network/" last_tranlation_time="2020-05-03" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

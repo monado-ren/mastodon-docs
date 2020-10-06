@@ -455,4 +455,4 @@ RAILS_ENV=production bin/tootctl help
 | :--- | :--- |
 | `--days` | 多久之前的嘟文将会被清理。默认为90天。 |
 
-{{< translation-status-zh-cn raw_title="Using the admin CLI" raw_link="/admin/tootctl/" last_tranlation_time="2020-05-05" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Using the admin CLI" raw_link="/en/admin/tootctl/" last_tranlation_time="2020-05-05" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

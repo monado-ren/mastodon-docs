@@ -94,4 +94,4 @@ iptables-persistent 将在机器启动时自动加载配置。但是由于我们
 iptables-restore < /etc/iptables/rules.v4
 ```
 
-{{< translation-status-zh-cn raw_title="Preparing your machine" raw_link="/admin/prerequisites/" last_tranlation_time="2020-05-04" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Preparing your machine" raw_link="/en/admin/prerequisites/" last_tranlation_time="2020-05-04" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

@@ -37,4 +37,4 @@ menu:
 
 个人资料以卡片的形式出现，其中包括用户的昵称、账号地址、账号简介，以及一些简短的统计信息，比如他们发布了多少条嘟文、有多少关注者、以及最后一次发布嘟文的时间。
 
-{{< translation-status-zh-cn raw_title="Promoting yourself and others" raw_link="/user/discoverability/" last_tranlation_time="2020-05-03" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Promoting yourself and others" raw_link="/en/user/discoverability/" last_tranlation_time="2020-05-03" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}

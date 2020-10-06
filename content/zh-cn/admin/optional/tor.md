@@ -150,4 +150,4 @@ service nginx restart
 
 许多的资源，诸如图片，将仍然从常规非Tor域名加载。问题的严重性很大程度上取决于用户的谨慎程度。
 
-{{< translation-status-zh-cn raw_title="Hidden services" raw_link="/admin/optional/tor/" last_tranlation_time="2020-05-04" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
+{{< translation-status-zh-cn raw_title="Hidden services" raw_link="/en/admin/optional/tor/" last_tranlation_time="2020-05-04" raw_commit="ad1ef20f171c9f61439f32168987b0b4f9abd74b">}}
