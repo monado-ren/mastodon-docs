@@ -71,8 +71,8 @@ enableGitInfo = true
   [[languages.zh-cn.menu.docs]]
     name = "前往英文版查看更多"
     weight = 30
-    identifier = "en"
-    url = "/en/"
+    identifier = "more"
+    url = "/more/"
 #  [[languages.zh-cn.menu.docs]]
 #    name = "开发Mastodon应用"
 #    weight = 30
