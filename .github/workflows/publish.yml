@@ -21,4 +21,5 @@ jobs:
       run: hugo --minify
 
     - name: Deploy
+      run: rm -rf /home/mastodon/mastodon-docs/public/
       run: cp -rf ./  /home/mastodon/mastodon-docs/

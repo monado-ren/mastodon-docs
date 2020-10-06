@@ -1,4 +1,4 @@
-baseURL = "http://docs.docs.monado.ren/"
+baseURL = "https://docs.monado.ren/"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
 title = "Mastodon 文档"
