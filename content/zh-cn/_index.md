@@ -5,7 +5,7 @@ menu:
   docs:
     weight: -99
 ---
-
+**该文档镜像由[Monado实例](https://monado.ren/)修改维护，[点击查看原版](https://docs.joinmastodon.org/)。**  
 {{< bilibili id="21139681" caption="一个使用动画介绍Mastodon概念的视频" >}}
 
 ## 什么是微博客？ {#microblogging}
