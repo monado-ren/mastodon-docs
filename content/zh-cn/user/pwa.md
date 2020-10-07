@@ -65,7 +65,7 @@ PWA(Progressive Web App)，即渐进式Web应用，是结合了一系列现代We
 {{< figure src="/assets/image%20%2870%29.png" caption="选择“安装”" >}}  
 {{< figure src="/assets/image%20%2871%29.png" caption="确认“安装”" >}}  
 {{< figure src="/assets/image%20%2872%29.png" caption="你将会在桌面上看到Mastodon的PWA应用图标" >}}  
-{{< figure src="/assets/image%20%2869%29.png" caption="PWA应用界面" >}}  
+{{< figure src="/assets/image%20%2873%29.png" caption="PWA应用界面" >}}  
 
 启动这个PWA应用，可以看到界面和原生应用也很相似。  
 - Microsoft Edge浏览器也可以安装PWA应用，过程与Chrome大同小异，这里不再赘述。
