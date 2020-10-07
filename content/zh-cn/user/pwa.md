@@ -34,15 +34,18 @@ PWA(Progressive Web App)，即渐进式Web应用，是结合了一系列现代We
 
 ## 在Android使用PWA应用 {#android}
 
-{{< figure src="/assets/image%20%2865%29.png" caption="Google Chrome" >}}
+{{< hint style="info" >}}
 在此之前，请确认你已经安装了Chrome，Chrome是Android上对PWA支持最好的浏览器。你可以在[手机乐园](https://soft.shouji.com.cn/down/22435.html) 或[Play商店](https://play.google.com/store/apps/details?id=com.android.chrome) 下载安装。  
+{{< /hint >}}  
+{{< figure src="/assets/image%20%2865%29.png" caption="Google Chrome" >}}  
+
 接下来，在Chrome中访问你想安装PWA应用的实例主页，打开菜单。
-{{< figure src="/assets/image%20%2866%29.png" caption="选择“添加到主屏幕”" >}}
-{{< figure src="/assets/image%20%2867%29.png" caption="确认“添加”" >}}
-{{< figure src="/assets/image%20%2868%29.png" caption="你将会在桌面上看到Mastodon的PWA应用图标" >}}
-{{< figure src="/assets/image%20%2878%29.png" >}}
-*如果图标添加失败，请检查你是否给Chrome开启了"桌面快捷方式权限"。*
-{{< figure src="/assets/image%20%2869%29.png" caption="PWA应用界面" >}}
+{{< figure src="/assets/image%20%2866%29.png" caption="选择“添加到主屏幕”" >}}  
+{{< figure src="/assets/image%20%2867%29.png" caption="确认“添加”" >}}  
+{{< figure src="/assets/image%20%2868%29.png" caption="你将会在桌面上看到Mastodon的PWA应用图标" >}}  
+{{< figure src="/assets/image%20%2878%29.png" >}}  
+*如果图标添加失败，请检查你是否给Chrome开启了"桌面快捷方式权限"。*  
+{{< figure src="/assets/image%20%2869%29.png" caption="PWA应用界面" >}}  
 启动这个PWA应用，可以看到界面和原生应用相似，没有了地址栏。
 
 ## 在iOS使用PWA应用 {#ios}
@@ -54,4 +57,11 @@ PWA(Progressive Web App)，即渐进式Web应用，是结合了一系列现代We
 {{< figure src="/assets/image%20%2877%29.png" caption="你将会在桌面上看到Mastodon的PWA应用图标" >}}
 
 ## 在桌面环境使用PWA应用 {#desktop}
-
+桌面环境中，Chrome对PWA的支持也是最好的。  
+在Chrome中访问你想安装PWA应用的实例主页，打开菜单。
+{{< figure src="/assets/image%20%2870%29.png" caption="选择“安装”" >}}  
+{{< figure src="/assets/image%20%2871%29.png" caption="确认“安装”" >}}  
+{{< figure src="/assets/image%20%2872%29.png" caption="你将会在桌面上看到Mastodon的PWA应用图标" >}}  
+{{< figure src="/assets/image%20%2869%29.png" caption="PWA应用界面" >}}  
+启动这个PWA应用，可以看到界面和原生应用也很相似。  
+- Microsoft Edge浏览器也可以安装PWA应用，过程与Chrome大同小异，这里不再赘述。
