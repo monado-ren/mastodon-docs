@@ -59,6 +59,11 @@ enableGitInfo = true
 
 [languages.zh-cn.menu]
   [[languages.zh-cn.menu.docs]]
+    name = "关于Monado"
+    weight = 5
+    identifier = "monado"
+    url = "/monado/"
+  [[languages.zh-cn.menu.docs]]
     name = "使用Mastodon"
     weight = 10
     identifier = "user"
