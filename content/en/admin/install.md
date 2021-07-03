@@ -73,8 +73,8 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 Once this is done, we can install the correct Ruby version:
 
 ```bash
-RUBY_CONFIGURE_OPTS=--with-jemalloc rbenv install 2.6.6
-rbenv global 2.6.6
+RUBY_CONFIGURE_OPTS=--with-jemalloc rbenv install 2.7.2
+rbenv global 2.7.2
 ```
 
 We’ll also need to install bundler:
@@ -199,27 +199,25 @@ At this point you should be able to visit your domain in the browser and see the
 
 Copy the systemd service templates from the Mastodon directory:
 
-```bash
+```sh
 cp /home/mastodon/live/dist/mastodon-*.service /etc/systemd/system/
 ```
 
-Then edit the files to make sure the username and paths are correct:
+If you deviated from the defaults at any point, check that the username and paths are correct: 
 
-* `/etc/systemd/system/mastodon-web.service`
-* `/etc/systemd/system/mastodon-sidekiq.service`
-* `/etc/systemd/system/mastodon-streaming.service`
+```sh
+$EDITOR /etc/systemd/system/mastodon-*.service
+```
 
 Finally, start and enable the new systemd services:
 
-```bash
+```sh
 systemctl daemon-reload
-systemctl start mastodon-web mastodon-sidekiq mastodon-streaming
-systemctl enable mastodon-web mastodon-sidekiq mastodon-streaming
+systemctl enable --now mastodon-web mastodon-sidekiq mastodon-streaming
 ```
 
-They will now automatically start at boot time.
+They will now automatically start at boot.
 
 {{< hint style="success" >}}
 **Hurray! This is it. You can visit your domain in the browser now!**
 {{< /hint >}}
-
