@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700|Roboto+Mono:400');
 @import 'fontawesome.scss';
 
-$white:    #fff   ; // color5
+$white: #fff; // color5
 $lightest: #ebebeb; // color2
-$lighter:  #18bdff; // color3
-$darkest:  #2d2d2d; // color1
-$black:    #000   ; // color8
-$darker:   lighten($darkest, 34%);
+$lighter: #18bdff; // color3
+$darkest: #2d2d2d; // color1
+$black: #000; // color8
+$darker: lighten($darkest, 34%);
 
-$vibrant:  #01ffcb; // color4
-$error:    #df405a; // color6
-$success:  #79bd9a; // color7
+$vibrant: #01ffcb; // color4
+$error: #df405a; // color6
+$success: #79bd9a; // color7
 
 $transition-in: 100ms linear;
 $transition-out: 250ms linear;
@@ -23,19 +23,86 @@ $mobile-width: 600px;
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -44,7 +111,16 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -56,16 +132,20 @@ body {
   text-size-adjust: none;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -112,7 +192,7 @@ body {
 
 .sidebar {
   @media screen and (max-width: $mobile-width) {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   .brand {
@@ -136,8 +216,12 @@ body {
     }
   }
 
-  & > ul > li {
+  &>ul>li {
     margin-bottom: 26px;
+
+    @media screen and (max-width: $mobile-width) {
+      margin-bottom: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -149,9 +233,11 @@ body {
     padding: 10px;
     font-weight: 500;
     text-transform: uppercase;
+    cursor: pointer;
   }
 
-  & > ul a {
+
+  &>ul a {
     display: block;
     color: $white;
     text-decoration: none;
@@ -160,6 +246,10 @@ body {
   }
 
   .sub-menu {
+    @media screen and (max-width: $mobile-width) {
+      display: none;
+    }
+
     a.active {
       color: $vibrant;
     }
@@ -171,6 +261,12 @@ body {
     .sub-menu {
       padding-left: 15px;
     }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .sidebar li:hover .sub-menu {
+    display: block;
   }
 }
 
@@ -326,7 +422,7 @@ main {
     }
   }
 
-  ol > li {
+  ol>li {
     &::before {
       padding-top: 0;
       content: counter(post) ". ";
@@ -334,8 +430,8 @@ main {
     }
   }
 
-  li > ul,
-  li > ol {
+  li>ul,
+  li>ol {
     margin-top: 14px;
   }
 
@@ -449,7 +545,7 @@ main {
     color: inherit;
   }
 
-  & > ul > li {
+  &>ul>li {
     margin-left: 0;
 
     &::before {
@@ -488,7 +584,7 @@ main {
     margin-bottom: 20px;
   }
 
-  & > a {
+  &>a {
     font-weight: 500;
     color: $vibrant;
     background: #fff;
@@ -692,7 +788,7 @@ main {
     width: 180px;
     font-size: 16px;
 
-    & > div:first-child {
+    &>div:first-child {
       margin-bottom: 2px;
     }
   }
@@ -741,7 +837,7 @@ main {
     justify-content: center;
     flex-direction: row;
 
-    & > div {
+    &>div {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -777,7 +873,7 @@ main {
     color: $lightest;
   }
 
-  .logo-grid > div {
+  .logo-grid>div {
     flex-wrap: wrap;
   }
 
