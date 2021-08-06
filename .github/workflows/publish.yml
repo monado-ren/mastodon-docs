@@ -27,5 +27,5 @@ jobs:
         ARGS: "-rltgoDzvO"
         SOURCE: ./public/
         REMOTE_HOST: ${{ secrets.SSH_HOST }}
-        REMOTE_USER: ${{ secrets.SSH_USER }}
-        TARGET: ${{ secrets.SSH_DIR }}
+        REMOTE_USER: mastodon
+        TARGET: ./monado/mastodon-docs
