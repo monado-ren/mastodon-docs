@@ -1,0 +1,71 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=/favicon.ico><link rel=stylesheet href=https://docs.monado.ren/style.min.ac66b095598a93816a47e5ef5b071058047fa4bd8770cb4515ca10c1ad6f91c0.css><script src=https://docs.monado.ren/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js async></script><title>匿名服务 - Mastodon文档 -Monado-</title><meta property="og:type" content="article"><meta property="og:url" content="https://docs.monado.ren/admin/optional/tor/"><meta name=description content="通过TOR的匿名服务来访问Mastodon。"><meta property="og:description" content="通过TOR的匿名服务来访问Mastodon。"><meta name=twitter:description content="通过TOR的匿名服务来访问Mastodon。"><meta name=twitter:title content="匿名服务"><meta name=twitter:site content="@joinmastodon"><link rel=canonical href=https://docs.monado.ren/admin/optional/tor/></head><body><div class="container sidebar-layout"><nav class=sidebar><a class=brand href=/><img class=link-logo src=/brand.svg alt=Mastodon></a><ul><li><a href=/>什么是Mastodon？</a></li><li><span class=sub-title>使用Mastodon</span><ul class=sub-menu><li><a href=/user/signup/>创建一个帐户</a></li><li><a href=/user/profile/>设置个人资料</a></li><li><a href=/user/posting/>发布嘟文</a></li><li><a href=/user/network/>使用社交功能</a></li><li><a href=/user/moderating/>处理不想要的内容</a></li><li><a href=/user/discoverability/>推广自己和他人</a></li><li><a href=/user/preferences/>设置你的首选项</a></li><li><a href=/user/contacts/>更多设置</a></li><li><a href=/user/external/>站外使用Mastodon</a></li><li><a href=/user/pwa/>使用PWA版Mastodon</a></li><li><a href=/user/moving/>迁移或删除帐户</a></li><li><a href=/user/run-your-own/>运行自己的服务器</a></li></ul></li><li><span class=sub-title>运营Mastodon</span><ul class=sub-menu><li><a href=/admin/prerequisites/>准备你的机器</a></li><li><a href=/admin/install/>从源中安装</a></li><li><a href=/admin/config/>设置你的环境</a></li><li><a href=/admin/optional/>安装可选特色功能</a><ul class=sub-menu><li><a href=/admin/optional/elasticsearch/>全文搜索</a></li><li><a href=/admin/optional/tor/ class=active>匿名服务</a></li><li><a href=/admin/optional/sso/>单点登录（SSO）</a></li></ul></li><li><a href=/admin/setup/>配置你的新实例</a></li><li><a href=/admin/tootctl/>使用管理命令行</a></li><li><a href=/admin/upgrading/>升级到新版本</a></li><li><a href=/admin/backups/>备份你的服务器</a></li><li><a href=/admin/migrating/>迁移到新机器</a></li><li><a href=/admin/scaling/>伸缩你的服务器</a></li><li><a href=/admin/moderation/>运营操作</a></li><li><a href=/admin/troubleshooting/>故障分析</a></li></ul></li><li><span class=sub-title>前往英文版查看更多</span><ul class=sub-menu><li><a href=/more/more/>更多</a></li></ul></li></ul></nav><main><h1>匿名服务</h1><p>通过TOR的匿名服务来访问Mastodon。</p><aside><nav id=TableOfContents><ul><li><ul><li><a href=#install>安装 Tor</a></li><li><a href=#configure>配置 Tor</a></li><li><a href=#nginx>移动你的Mastodon配置</a></li><li><a href=#http>通过http提供Tor服务</a></li><li><a href=#gotchas>陷阱</a></li></ul></li></ul></nav></aside><div class=e-content><p>可以通过TOR的匿名服务来访问Mastodon。这将给你一个只能通过 TOR 网络连接的 *.onion 地址。</p><h2 id=install>安装 Tor</h2><p>首先，Tor的Debian软件仓库需要被添加至apt中。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>deb https://deb.torproject.org/torproject.org stretch main
+deb-src https://deb.torproject.org/torproject.org stretch main
+</code></pre></div><p>接下来，添加相应gpg密钥。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --import
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+</code></pre></div><p>最后，安装所需软件包。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apt install tor deb.torproject.org-keyring
+</code></pre></div><h2 id=configure>配置 Tor</h2><p>编辑 <code>/etc/tor/torrc</code> 并添加如下设置。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>HiddenServiceDir /var/lib/tor/hidden_service/
+HiddenServiceVersion 3
+HiddenServicePort 80 127.0.0.1:80
+</code></pre></div><p>重启 tor。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo service tor restart
+</code></pre></div><p>现在，你的tor域名可以在 <code>/var/lib/tor/hidden_service/hostname</code> 找到。</p><h2 id=nginx>移动你的Mastodon配置</h2><p>我们将需要将你的Mastodon配置告诉Nginx两次。为了不自我重复（<a href=https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>DRY</a>），我们需要将Mastodon配置移动到一个可被引用的独立文件。</p><p>在 <code>/etc/nginx/snippets/mastodon.conf</code> 创建一个新文件。放入除<code>listen</code>、<code>server_name</code>、<code>include</code>及所有SSL相关选项之外的所有配置参数至新文件中。你的新文件看起来可能像这样。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>add_header Referrer-Policy &#34;same-origin&#34;;
+
+keepalive_timeout    70;
+sendfile             on;
+client_max_body_size 80m;
+
+root /home/mastodon/live/public;
+…
+error_page 500 501 502 503 504 /500.html;
+
+access_log /var/log/nginx/mastodon_access.log;
+error_log /var/log/nginx/mastodon_error.log warn;
+</code></pre></div><p>替换你的旧Mastodon配置文件，在新配置文件中添加一个include指令。</p><p>你的Nginx配置文件将看起来像这样。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>server {
+  listen 80;
+  server_name mastodon.myhosting.com;
+  return 301 https://$server_name$request_uri;
+}
+
+map $http_upgrade $connection_upgrade {
+  default upgrade;
+  &#39;&#39;      close;
+}
+
+server {
+  listen 443 ssl http2;
+  list [::]:443 ssl http2;
+  server_name mastodon.myhosting.com;
+  include /etc/nginx/snippets/mastodon.conf;
+
+  ssl_certificate /etc/letsencrypt/live/mastodon.myhosting.com/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/mastodon.myhosting.com/privkey.pem;
+}
+</code></pre></div><h2 id=http>通过http提供Tor服务</h2><p>尽管通过https提供你的Tor版Mastodon可能很诱人，但对大多数人来说这不是一个好主意。请参阅Tor Project上的<a href=https://blog.torproject.org/facebook-hidden-services-and-https-certs>这篇</a>博文，了解为什么https证书无法增加价值。由于你无法获得onion域名的SSL证书，当你尝试使用你的Mastodon时还会被证书错误所困扰。最近，一位Tor开发者在<a href=https://matt.traudt.xyz/p/o44SnkW2.html>这里</a>阐述了为什么通过https提供Tor服务对大多数用例都没有好处的原因。</p><p>解决方法是通过http提供你的Mastodon服务，但仅供Tor使用。这可以通过在Nginx配置文件中添加额外的设置来完成。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text>server {
+  listen 80;
+  server_name mastodon.qKnFwnNH2oH4QhQ7CoRf7HYj8wCwpDwsa8ohJmcPG9JodMZvVA6psKq7qKnFwnNH2oH4QhQ7CoRf7HYj8wCwpDwsa8ohJmcPG9JodMZvVA6psKq7.onion;
+  include /etc/nginx/snippets/mastodon.conf;
+}
+
+server {
+  listen 80;
+  server_name mastodon.myhosting.com;
+  return 301 https://$server_name$request_uri;
+}
+
+map $http_upgrade $connection_upgrade {
+  default upgrade;
+  &#39;&#39;      close;
+}
+
+server {
+  listen 443 ssl http2;
+  list [::]:443 ssl http2;
+  server_name mastodon.myhosting.com;
+  include /etc/nginx/snippets/mastodon.conf;
+
+  ssl_certificate /etc/letsencrypt/live/mastodon.myhosting.com/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/mastodon.myhosting.com/privkey.pem;
+}
+</code></pre></div><p>用你位于 <code>/var/lib/tor/hidden_service/hostname</code> 文件中的长hash替换上文中提供的。</p><p>请注意，onion域名已经被附加了“mastodon.”前缀。你的Tor地址充当通配符域名。所有的子域名都将被路由，你可以配置你的Nginx来响应你想要的任何子域名。如果你不想在你的tor域名上托管任何其他服务，你可以省略子域名，或者选择一个不同的子域名。</p><p>这里，你就可以看出移动你的mastodon配置到不同文件的好处了。如果不移动的话，你的所有配置都必须粘贴至两个地方，任何对你配置的改动你都必须同时修改两个地方。</p><p>重启你的Web服务器。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>service nginx restart
+</code></pre></div><h2 id=gotchas>陷阱</h2><p>你需要注意一些事情。某些重定向会将你的用户跳转至https。他们必须手动把URL替换成http才能继续。</p><p>许多的资源，诸如图片，将仍然从常规非Tor域名加载。问题的严重性很大程度上取决于用户的谨慎程度。</p><figure><p><strong>翻译状态：</strong>
+本文是英文页面 <a href=/en/admin/optional/tor/>Hidden services</a> 的翻译，最后翻译时间：2020-05-04，点击<a href=https://github.com/chasedream1129/mastodon-docs/compare/ad1ef20f171c9f61439f32168987b0b4f9abd74b...master>这里</a>可以查看翻译后页面的改动。</p></figure><p style=color:#687590>最后更新于 October 7, 2020 · <a href=https://github.com/chasedream1129/mastodon-docs/tree/master/content/zh-cn/admin/optional/tor.md style=color:#687590>改进此页面</a><br>也可在此找到：
+<a href=https://docs.monado.ren/en/admin/optional/tor/ style=color:#687590 hreflang=en>English</a></p></div></main></div></body></html>
